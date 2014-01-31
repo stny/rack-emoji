@@ -18,6 +18,18 @@ Or install it yourself as:
 
 ## Usage
 
+To get started, need a copy of emoji images.
+Edit your Rakefile:
+
+```
+# Rakefile
+load 'tasks/emoji.rake'
+```
+
+```
+$ rake emoji # copied to your public directory
+```
+
 Edit your rack application file as follows:
 
 ```
@@ -28,6 +40,13 @@ use Rack::Emoji, :width => 50, :height => 50
 ...
 
 run app
+```
+
+Just use emoji name.
+
+```
+# your.html/erb/haml...
+:dog:
 ```
 
 ## Options
@@ -44,3 +63,7 @@ run app
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Acknowledgment
+
+[github/gemoji](https://github.com/github/gemoji)
