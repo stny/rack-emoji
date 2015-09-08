@@ -19,7 +19,7 @@ module Rack
 
       if headers["Content-Type"] && headers["Content-Type"].include?("text/html")
         new_response = emojify(response)
-        headers['Content-Length'] = new_response.length.to_s
+        headers['Content-Length'] = new_response.bytesize.to_s
         [status, headers, [new_response]]
       else
         [status, headers, response]
